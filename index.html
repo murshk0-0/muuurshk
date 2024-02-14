@@ -6,7 +6,7 @@
 <title>Валентинка</title>
 <style>
     body {
-        background-color: pink;
+        background-color: #F8C8DC;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,28 +24,25 @@
         margin: 10px;
         cursor: pointer;
         border-radius: 5px;
+        background-color: #e89be5;
+        border: none;
     }
     #yes {
-        background-color: green;
-        color: white;
-    }
-    #no {
-        background-color: red;
-        color: white;
+        transition: all 0.3s ease-in-out;
     }
 </style>
 </head>
 <body>
 <div id="message">Ты примешь мою валентинку?</div>
 <button id="yes" class="button" onclick="location.href='https://murshk0-0.github.io/murshkk/index.html/yes.html'">Да</button>
-<button id="no" class="button" onclick="increaseYesCount()">Нет</button>
+<button id="no" class="button" onclick="increaseYesSize()">Нет</button>
 
 <script>
-    let yesCount = 0;
-
-    function increaseYesCount() {
-        yesCount++;
-        document.getElementById("yes").innerText = "Да (" + yesCount + ")";
+    function increaseYesSize() {
+        var yesButton = document.getElementById("yes");
+        var currentSize = window.getComputedStyle(yesButton).fontSize;
+        var newSize = parseInt(currentSize) + 2;
+        yesButton.style.fontSize = newSize + "px";
     }
 </script>
 </body>
