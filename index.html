@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Валентинка</title>
+<style>
+    body {
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+    }
+    #message {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #yes {
+        background-color: green;
+        color: white;
+    }
+    #no {
+        background-color: red;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<div id="message">Ты примешь мою валентинку?</div>
+<button id="yes" class="button" onclick="location.href='https://murshk0-0.github.io/murshkk/index.html/yes.html'">Да</button>
+<button id="no" class="button" onclick="increaseYesCount()">Нет</button>
+
+<script>
+    let yesCount = 0;
+
+    function increaseYesCount() {
+        yesCount++;
+        document.getElementById("yes").innerText = "Да (" + yesCount + ")";
+    }
+</script>
+</body>
+</html>
