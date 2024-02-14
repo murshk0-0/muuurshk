@@ -13,9 +13,10 @@
         flex-direction: column;
         height: 100vh;
         margin: 0;
+        color: white; /* Изменение цвета текста */
     }
     #message {
-        font-size: 24px;
+        font-size: 28px; /* Увеличенный размер текста */
         margin-bottom: 20px;
     }
     .button {
@@ -26,6 +27,7 @@
         border-radius: 5px;
         background-color: #e89be5;
         border: none;
+        color: white; /* Изменение цвета текста */
     }
     #yes {
         transition: all 0.3s ease-in-out;
@@ -41,7 +43,7 @@
     function increaseYesSize() {
         var yesButton = document.getElementById("yes");
         var currentSize = window.getComputedStyle(yesButton).fontSize;
-        var newSize = parseInt(currentSize) + 2;
+        var newSize = parseInt(currentSize) + 10; // Увеличиваем размер на 10px
         yesButton.style.fontSize = newSize + "px";
     }
 </script>
